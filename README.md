@@ -4,7 +4,6 @@ A two-layer decision-support system for flood response in India. **Layer 1** for
 
 Most flood-ML projects stop at the prediction. AEGIS asks the harder question: when several districts are at risk at once and stock is limited, who gets what, and how fast?
 
-> Paper: [`docs/AEGIS_AI_paper.docx`](docs/AEGIS_AI_paper.docx) · Notebooks: [`notebooks/`](notebooks) · Interview notes: [`docs/INTERVIEW_NOTES.md`](docs/INTERVIEW_NOTES.md)
 
 ## How it fits together
 
@@ -84,7 +83,7 @@ backend/     aegis_lp.py  the LP, greedy baseline and metrics ported from the no
              main.py      FastAPI endpoints: /api/health, /api/demo, /api/solve
              test_solver.py
 frontend/    React + Vite dashboard
-docs/        paper and interview notes
+
 ```
 
 ## Assumptions and limitations
@@ -96,7 +95,7 @@ These are in the paper and in the UI, and they are the honest boundary of the pr
 - **Travel time** is straight-line distance × 1.3 at 35 km/h, not real roads.
 - **Calibration is thin above about 0.6** because the isotonic calibrator saw only two validation years with few floods.
 - **One scenario is analysed in depth.** Multi-day rolling allocation and restocking are future work.
-- Layer 1 forecast error is not yet fed into Layer 2 in the notebooks. The dashboard's stress test is a first step.
+
 
 ## Map data and credits
 
@@ -107,6 +106,6 @@ These are in the paper and in the UI, and they are the honest boundary of the pr
 
 Cost-sensitive thresholds at a target recall, real exposure data, OpenStreetMap road routing with flood closures, rolling multi-day allocation, robust optimisation under forecast uncertainty, and a live river-gauge feed.
 
-## Authors
 
-Atharv Shrivastava, Khushi Lodha, Ayush Rai and Sukhniddhi Kaur, B.Tech CSE (AI & DS), MIT-WPU, Pune. Guide: Prof. Shilpa Sonawani.
+
+
